@@ -1,0 +1,753 @@
+/* font load */
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('/font/UbuntuMono-Bold.woff2') format('woff2'),
+        url('/font/UbuntuMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('/font/UbuntuMono-Regular.woff2') format('woff2'),
+        url('/font/UbuntuMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('/font/UbuntuMono-BoldItalic.woff2') format('woff2'),
+        url('/font/UbuntuMono-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('/font/UbuntuMono-Italic.woff2') format('woff2'),
+        url('/font/UbuntuMono-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Serif 4";
+    src: url("/font/SourceSerif4-Regular.ttf.woff2") format('woff2'),
+         url("/font/SourceSerif4-Regular.ttf.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Serif 4";
+    font-style: italic;
+    src: url("/font/SourceSerif4-It.ttf.woff2") format('woff2'),
+         url("/font/SourceSerif4-It.ttf.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Serif 4";
+    font-weight: bold;
+    src: url("/font/SourceSerif4-Bold.ttf.woff2") format('woff2'),
+         url("/font/SourceSerif4-Bold.ttf.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Serif 4";
+    font-weight: bold;
+    font-style: italic;
+    src: url("/font/SourceSerif4-BoldIt.ttf.woff2") format('woff2')
+         url("/font/SourceSerif4-BoldIt.ttf.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gentium Plus';
+    src: url('/font/GentiumPlus-Bold.woff2') format('woff2'),
+        url('/font/GentiumPlus-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gentium Plus';
+    src: url('/font/GentiumPlus-Italic.woff2') format('woff2'),
+        url('/font/GentiumPlus-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gentium Plus';
+    src: url('/font/GentiumPlus-BoldItalic.woff2') format('woff2'),
+        url('/font/GentiumPlus-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gentium Plus';
+    src: url('/font/GentiumPlus.woff2') format('woff2'),
+        url('/font/GentiumPlus.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* defaults */
+
+:root { 
+    --serif: "Source Serif 4", TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+    --monospace: "Ubuntu Mono", "Inconsolata", Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+    --header-font: var(--monospace);
+    --body-font: var(--serif);
+    --ipa-font: "Gentium Plus", TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+}
+
+/* theme colors */
+
+:root {
+    --background-color: #fafafa;
+    --secondary-background-color: #ededed;
+
+    --text-color: #242627;
+    --text-color-highlight: #242627;
+    --text-color-secondary-highlight: DimGray;
+
+    --syntax-tab-size: 2;
+
+    --base-font-size: calc(0.2vh + 1em);
+}
+
+.dark-toggle {
+    --background-color: #242627;
+    --secondary-background-color: #313639;
+
+    --text-color: #f5f3ef;
+    --text-color-highlight: #f5f3ef;
+    --text-color-secondary-highlight: Silver;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #242627;
+        --secondary-background-color: #313639;
+
+        --text-color: #f5f3ef;
+        --text-color-highlight: #f5f3ef;
+        --text-color-secondary-highlight: Silver;
+    }
+
+    .dark-toggle {
+        --background-color: #fafafa;
+        --secondary-background-color: #ededed;
+
+        --text-color: #242627;
+        --text-color-highlight: #242627;
+        --text-color-secondary-highlight: DimGray;
+
+        --syntax-tab-size: 2;
+    }
+}
+
+/* dark mode toggle */
+
+.toggle-dark-button {
+    cursor: pointer !important;
+}
+
+/* global stylesheet */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: calc(4 * var(--base-font-size));
+    scrollbar-gutter: stable;
+  }
+
+body {
+    font-size: var(--base-font-size);
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: var(--body-font);
+    letter-spacing: default;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    max-width: min(700px, 90%);
+    counter-reset: sidenote-counter;
+}
+
+:lang(zh-Hant) {
+    font-style: normal !important;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+p,
+blockquote,
+li,
+td {
+    line-height: 1.6;
+}
+
+a[href] {
+    color: var(--text-color-highlight);
+    text-decoration: underline dotted;
+}
+
+.postlist-tags > a[href] {
+    color: var(--text-color-secondary-highlight) !important;
+    text-decoration: underline dotted;
+}
+
+a[href]:visited {
+    color: var(--text-color-secondary-highlight);
+}
+
+a[href]:hover,
+a[href]:active {
+    text-decoration: underline solid;
+    color: var(--text-color-highlight) !important;
+}
+
+article {
+    margin: 1.2em 0;
+}
+
+article :where(li),
+.artclass :where(li) {
+    padding-left: 1ch;
+    margin: 0.4em 0;
+}
+
+article :where(ul),
+ul.artclass {
+    list-style-type: "»";
+}
+
+.links-nextprev {
+    list-style: none;
+    padding: 0;
+    margin: 1.6em 0;
+}
+
+table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin-top: 1.2em 0;
+}
+
+table th,
+table td {
+    padding: 0.3em;
+    word-wrap: break-word;
+    line-height: 1;
+}
+
+table tr {
+    border-bottom: 1px dotted;
+    border-top: 1px dotted;
+}
+
+table th {
+    font-family: var(--body-font);
+    text-align: left;
+}
+
+table caption {
+    caption-side: bottom;
+    font-size: 90%;
+    padding-top: 0.4em;
+    border-top: none;
+    text-align: start;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font);
+}
+
+h1, h2 {
+    font-size: 1.5em;
+}
+
+pre,
+code {
+    font-family: var(--monospace);
+}
+
+pre:not([class*="language-"]) {
+    margin: .5em 0;
+    line-height: 1.375;
+    /* 22px /16 */
+    -moz-tab-size: var(--syntax-tab-size);
+    -o-tab-size: var(--syntax-tab-size);
+    tab-size: var(--syntax-tab-size);
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+}
+
+code {
+    word-break: break-all;
+}
+
+/* header */
+
+header {
+    z-index: 99;
+    background-color: var(--background-color);
+    top: 0;
+    position: sticky;
+    opacity: 0.9;
+}
+
+header:hover {
+    opacity: 1;
+}
+
+header {
+    display: flex;
+    gap: 1em .5em;
+    flex-wrap: wrap;
+    padding: 1em 0em;
+}
+
+/* nav */
+
+.nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-item {
+    font-family: var(--monospace);
+    margin-right: 1em;
+    text-transform: lowercase;
+}
+
+.nav-item a[href]:not(:hover) {
+    text-decoration: none;
+}
+
+.nav a[href][aria-current="page"] {
+    text-decoration: underline;
+}
+
+.nav-item a[href]:visited {
+    color: var(--text-color-highlight) !important;
+}
+
+/* posts list */
+
+.postlist {
+    list-style: none;
+    padding: 0;
+    padding-left: 1.6rem;
+}
+
+.postlist-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    counter-increment: start-from -1;
+    margin-bottom: 1em;
+}
+
+.postlist-item:before {
+    display: inline-block;
+    pointer-events: none;
+    content: ""counter(start-from, decimal-leading-zero) ". ";
+    line-height: 100%;
+    text-align: right;
+    margin-left: -1.6rem;
+}
+
+.postlist-date,
+.postlist-tags,
+.postlist-item:before {
+    font-family: var(--monospace);
+    color: var(--text-color-secondary-highlight);
+}
+
+.postlist-link {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: var(--header-font);
+    flex-basis: calc(100% - 1.5rem);
+    padding-left: .25em;
+    padding-right: .5em;
+    text-underline-position: from-font;
+    text-underline-offset: 0;
+    text-decoration-thickness: 1px;
+}
+
+.postlist-link:visited {
+    color: var(--text-color-highlight) !important;
+}
+
+.postlist-item-active .postlist-link {
+    font-weight: bold;
+}
+
+/* tags */
+
+.post-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.postlist-item>.post-tag {
+    align-self: center;
+}
+
+/* tags list */
+
+.post-metadata {
+    font-family: var(--monospace);
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: .4em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-metadata time {
+    font-family: var(--monospace);
+}
+
+.prevnexttext {
+    font-family: var(--monospace);
+}
+
+/* direct Links / markdown Headers */
+
+.header-anchor {
+    text-decoration: none;
+    font-style: normal;
+    font-size: 1em;
+    margin-left: .1em;
+}
+
+a[href].header-anchor,
+a[href].header-anchor:visited {
+    color: transparent;
+}
+
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+    text-decoration: underline solid;
+}
+
+a[href].header-anchor:focus,
+:hover>a[href].header-anchor {
+    color: #aaa;
+}
+
+h2+.header-anchor {
+    font-size: 1.5em;
+}
+
+footer {
+    padding: 1.6em 0;
+    font-family: var(--monospace);
+    font-size: 0.9em;
+}
+
+.citation {
+    font-variant-numeric: oldstyle-nums;
+}
+
+small {
+    font-size: 0.9em;
+}
+
+.comment-form {
+    font-family: var(--monospace);
+}
+
+form input,
+form select,
+form textarea {
+  font-family: var(--monospace);
+  color: inherit;
+  background-color: inherit;
+  font-size: 100%;
+}
+
+button {
+    font-family: inherit;
+    font-variant: small-caps;
+    font-size: 100%;
+    color: var(--text-color);
+    background-color: var(--secondary-background-color);
+    border: none;
+    padding: 0.2em 0.4em;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--secondary-background-color);
+    background-color: var(--text-color);
+}
+
+form input,
+form textarea {
+  background: none;
+  border: 1px dashed var(--text-color);
+  width: 100%;
+  margin: 0.4em 0;
+  padding: 0.4em;
+}
+
+.comment-form {
+    margin: 1em 0;
+}
+
+.comment-form-field {
+    margin: 1em 0; 
+}
+
+/* Tufte-style sidenotes & margin notes (inline version) modified from https://github.com/edwardtufte/tufte-css, MIT license */
+
+.sidenote-number {
+    counter-increment: sidenote-counter;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+    position: relative;
+    vertical-align: baseline;
+}
+
+.sidenote:before {
+    font-family: var(--monospace);
+    content: counter(sidenote-counter) " ";
+    color: var(--text-color-highlight);
+}
+
+input.margin-toggle {
+    display: none;
+}
+
+label.sidenote-number,
+label.margin-toggle-inline-symbol {
+    font-family: var(--monospace);
+    position: relative;
+    font-size: 0.9em;
+    color: var(--text-color-highlight);
+    top: -0.64em;
+    vertical-align: baseline;
+    display: inline-block;
+    max-height: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    /* should be less than or equal to paragraph line-height */
+}
+
+label.sidenote-number:hover~.sidenote {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+    label.margin-toggle:not(.sidenote-number) {
+        display: inline;
+    }
+
+    .margin-toggle-inline-symbol {
+        display: inline;
+    }
+
+    .sidenote-number:after {
+        content: "[" counter(sidenote-counter) "]";
+        speak: none;
+    }
+
+@media (hover: hover) {
+        .margin-toggle:not(:checked, :hover) + .sidenote,
+        .margin-toggle:not(:checked, :hover) + .marginnote {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+
+        .margin-toggle:checked + .sidenote,
+        .margin-toggle:checked + .marginnote {
+            display: block;
+            float: left;
+            left: 1em;
+            clear: both;
+            width: 95%;
+            margin: 1em 2.5%;
+            position: relative;
+        }
+
+        .margin-toggle:hover + .sidenote,
+        .margin-toggle:hover + .marginnote {
+            display: block;
+            float: left;
+            left: 1em;
+            clear: both;
+            width: 95%;
+            margin: 1em 2.5%;
+            position: relative;
+        }
+
+        .margin-toggle:hover + .sidenote:after, 
+        .margin-toggle:hover + .marginnote:after {
+        content: " (*To make this note stay on page, or to make it no longer stay, click the number before moving away the mouse pointer)";
+        color: var(--text-color-secondary-highlight);
+        font-family: var(--monospace);
+        font-style: italic;
+    }
+}
+
+    @media (hover: none) {
+        .margin-toggle:not(:checked) + .sidenote,
+        .margin-toggle:not(:checked) + .marginnote {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+
+        .margin-toggle:checked + .sidenote,
+        .margin-toggle:checked + .marginnote {
+        display: block;
+        float: left;
+        left: 1em;
+        clear: both;
+        width: 95%;
+        margin: 1em 2.5%;
+        position: relative;
+    } 
+}
+
+    label.margin-toggle {
+        cursor: pointer;
+        color: var(--text-color-highlight);
+        text-decoration: underline dotted !important;
+        text-underline-offset: 0.2em;
+    }
+
+    label.margin-toggle:hover {
+        text-decoration: underline solid !important;
+    }
+
+    label.sidenote-number:hover~.sidenote {
+        text-decoration: inherit;
+    }
+
+
+/* accordion */
+
+.accordion > input[name="collapse"] {
+    display: none;
+  }
+
+.accordion .content {
+    display: none;
+  }
+
+.accordion > input[name="collapse"]:checked ~ .content {
+    display: inherit;
+  }
+
+.handle-text {
+    color: var(--text-color-highlight);
+    text-decoration: underline dotted;
+}
+
+.handle-text:hover {
+    text-decoration: underline solid;
+    cursor: pointer;
+}
+
+/* misc */
+
+.IPA {
+    font-family: var(--ipa-font);
+}
+
+.monospace {
+    font-family: "Source Sans 3";
+}
+
+.sc {
+    font-variant: small-caps;
+}
+
+.translower {
+    text-transform: lowercase;
+}
+
+.downloadable:after {
+    content: " dl";
+    font-variant: small-caps;
+    position: relative;
+    color: var(--text-color-secondary-highlight);
+    font-size: 0.9em;
+    top: -0.1em;
+    vertical-align: baseline;
+    display: inline-block;
+    max-height: 1em;
+}
+
+.internet-archive:after {
+    content: " ia";
+    font-variant: small-caps;
+    position: relative;
+    color: var(--text-color-secondary-highlight);
+    font-size: 0.9em;
+    top: -0.1em;
+    vertical-align: baseline;
+    display: inline-block;
+    max-height: 1rem;
+}

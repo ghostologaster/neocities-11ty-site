@@ -1,0 +1,134 @@
+---
+layout: layouts/base.njk
+---
+{# Only include the syntax highlighter CSS on blog posts #}
+{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+{%- css %}{% include "asset/css/prism-diff.css" %}{%- endcss %}
+{% if toggleallnotes === "yes" %}
+{%- css %}
+
+/* checkbox to toggle all inline notes */
+.css-checkbox { 
+	position: absolute; 
+	overflow: hidden; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	width: 1px; 
+	margin: -1px; 
+	padding: 0; 
+	border: 0; 
+}
+
+.css-checkbox + label { 
+	position: relative; 
+	cursor: pointer;
+}
+
+.css-checkbox + label > span { 
+	font-size: 90% /* same as <small> */;
+	font-style: italic;
+	color: var(--text-color-secondary-highlight);
+}
+
+.css-checkbox + label:before { 
+	content: "[\202F]\202F"; 
+	font-size: var(--base-font-size);
+}
+
+.css-checkbox:checked + label:after { 
+	content: url("/img/1F426-200D-2B1B-outline.svg"); 
+	position: absolute; 
+	justify-content: center; 
+	align-items: center; 
+	left: calc(0.2 * var(--base-font-size)); 
+	top: 0; 
+	font-size: var(--base-font-size); 
+	height: var(--base-font-size); 
+	width: var(--base-font-size); 
+	font-style: normal;
+	text-decoration: none !important;
+}
+
+.dark-toggle .css-checkbox:checked + label:after { 
+	content: url("/img/1F426-200D-2B1B-outline-white.svg");
+}
+
+@media (prefers-color-scheme: dark) {
+	.css-checkbox:checked + label:after { 
+	content: url("/img/1F426-200D-2B1B-outline-white.svg"); }
+	.dark-toggle .css-checkbox:checked + label:after { 
+	content: url("/img/1F426-200D-2B1B-outline.svg");
+}
+}
+
+{%- endcss %}
+{% endif %}
+
+{% if toggleallnotes === "yes" %}
+<script>
+/* https://stackoverflow.com/a/35218069 */
+function toggle(source) {
+    var checkboxes = document.querySelectorAll('input[class="margin-toggle"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i] != source)
+            checkboxes[i].checked = source.checked;
+    }
+}
+</script>
+{% endif %}
+<h1>{{ title }}</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>&nbsp;</li>
+	<li>~{{ content | wordcount }} words&nbsp;</li>
+	{%- for tag in tags | filterTagList %}
+	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+	<li><a href="{{ tagUrl }}" class="post-tag">#{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+	{%- endfor %}
+</ul>
+
+{% if toggleallnotes === "yes" %}
+<p style="font-family:var(--monospace);"><input name="cssCheckbox" id="allnoteexpand" type="checkbox" onclick="toggle(this)" class="css-checkbox">
+	<label for="allnoteexpand"><span>check this box to expand all inline notes (*requires javascript)</span></label></p>
+{% endif %}
+
+<article>
+{{ content | safe }}
+</article>	
+{%- if collections.posts %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+{%- set nextPost = collections.posts | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<ul class="links-nextprev">
+	{%- if nextPost %}<li><span class="prevnexttext">Next post:</span> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+	{%- if previousPost %}<li><span class="prevnexttext">Previous post:</span> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+</ul>
+
+{%- endif %}
+{%- endif %}
+
+		{% if comments === "yes" %}
+		<form class="comment-form accordion" action="https://riku.miso.town/submit?user_id=35&label={{ page.url | htmlBaseUrl | slugify }}" method="post">
+		<input type="checkbox" name="collapse" id="handle1" />
+		<p class="handle"><label for="handle1">// <span class="handle-text">any comments?</span></label></p>
+		<div class="content"><p><small style="color: var(--text-color-secondary-highlight);">(PLEASE NOTE: no one except me will receive what you sent, but by sending it, you agree that I may post it to this website at a later date. I will not disclose your email unless given your explicit permission. The form is collected by <a href="https://riku.miso.town/" target="_blank" style="font-family: var(--monospace);">riku.miso.town</a>.)</small></p></div>
+		  <div class="content comment-form-field">
+		    <label for="name">name*</label>
+		    <input type="text" name="name" id="name" placeholder="name" required>
+ 		 </div>
+
+		  <div class="content comment-form-field">
+		    <label for="email">email*</label>
+		    <input type="email" name="email" id="email" placeholder="email" required>
+		  </div>
+
+		  <div class="content comment-form-field">
+		    <label for="message">message*</label>
+		    <textarea name="message" placeholder="say something here…" id="message" required></textarea>
+		  </div>
+
+    	<div class="content comment-form-field">
+      		<button type="submit">send</button>
+   		 </div>
+		</form>
+		{% endif %}

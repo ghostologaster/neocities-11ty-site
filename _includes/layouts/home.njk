@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+{%- css %}
+a[href]{font-family: var(--monospace);}
+
+.textart {
+    line-height: 1!important;
+    text-wrap: nowrap;
+     style="font-family: var(--monospace);"
+}
+
+{% endcss %}
+
+{{ content | safe }}

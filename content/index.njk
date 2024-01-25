@@ -1,0 +1,41 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+numberOfLatestPostsToShow: 5
+homepage: yes
+---
+<div class="mainbody">
+<h1>Hi :3</h1>
+<pre aria-description='ASCII art by Joan G. Stark titled "howling coyote/wolf"' title='ASCII art by Joan G. Stark titled "howling coyote/wolf"'><pre aria-hidden="true" class="textart">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .-'''''-.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _/|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp; =/_/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `._/ |&nbsp;&nbsp;&nbsp;&nbsp; .'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (&nbsp;&nbsp; /&nbsp; ,|...-'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \_/^\/||__
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _/~&nbsp; `""~`"` \_
+&nbsp;&nbsp;&nbsp;&nbsp; __/&nbsp; -'/&nbsp; `-._ `\_\__
+&nbsp;&nbsp; /<a href="https://web.archive.org/web/20091028022937/http://www.geocities.com/SoHo/7373/wildlife.htm" target="_blank">jgs</a>&nbsp; /-'`&nbsp; `\&nbsp;&nbsp; \&nbsp; \-.\</pre></pre>
+<p>This is ghost's homepage & blog.</p>
+<ul class="artclass"><li><a href="/about">ABOUT</a>: more information about ghost & this site</li>
+<li><a href="/links">LINKS</a>: links to other websites that ghost is fond of and/or finds useful, as well as some buttons</li>
+<li><span style="font-family: var(--monospace);">WEBRING</span>: <br><div id='neossg'>
+  <script type="text/javascript" src="https://neossg.neocities.org/onionring-variables.js"></script>
+  <script type="text/javascript" src="https://neossg.neocities.org/onionring-widget.js"></script>
+</div></li>
+<li><a href="https://www.poetryfoundation.org/poems/47537/the-man-moth" target="_blank">"he does not see the moon; he observes only her vast properties…"</a></li>
+</ul>
+
+{% set postsCount = collections.posts | length %}
+<h2>blogposts</h2>
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
+
+<p style="font-family: var(--monospace);"><small>{{ postsCount }} posts in total. See <a href="/tags">a list of all tags</a> here</small></p>
+
+</div>
