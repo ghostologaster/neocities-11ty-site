@@ -2,7 +2,7 @@
 layout: layouts/about.njk
 eleventyNavigation:
   key: About
-  order: 1
+  order: 3
 latex: yes
 date: 2024-01-25
 title: About
