@@ -4,7 +4,7 @@ description: On the phonological information encoded in the Chinese characters a
 date: 2024-01-19
 post: yes
 comments: yes
-toggleallnotes: yes
+toggle_all_notes: yes
 latex: no
 draft: false
 tags: 

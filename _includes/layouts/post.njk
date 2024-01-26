@@ -4,7 +4,7 @@ layout: layouts/base.njk
 {# Only include the syntax highlighter CSS on blog posts #}
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 {%- css %}{% include "asset/css/prism-diff.css" %}{%- endcss %}
-{% if toggleallnotes === "yes" %}
+{% if toggle_all_notes === "yes" %}
 {%- css %}
 
 /* checkbox to toggle all inline notes */
@@ -41,7 +41,7 @@ layout: layouts/base.njk
 {%- endcss %}
 {% endif %}
 
-{% if toggleallnotes === "yes" %}
+{% if toggle_all_notes === "yes" %}
 <script>
 /* https://stackoverflow.com/a/35218069 */
 function toggle(source) {
@@ -64,7 +64,7 @@ function toggle(source) {
 	{%- endfor %}
 </ul>
 
-{% if toggleallnotes === "yes" %}
+{% if toggle_all_notes === "yes" %}
 <p style="font-family:var(--secondary-font);"><input name="cssCheckbox" id="allnoteexpand" type="checkbox" onclick="toggle(this)" class="css-checkbox">
 	<label for="allnoteexpand"><span>check this box to expand all inline notes (*requires javascript)</span></label></p>
 {% endif %}
