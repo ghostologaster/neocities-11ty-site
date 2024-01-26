@@ -30,35 +30,12 @@ layout: layouts/base.njk
 	color: var(--text-color-secondary-highlight);
 }
 
-.css-checkbox + label:before { 
-	content: "[\202F]\202F"; 
-	font-size: var(--base-font-size);
+.css-checkbox:not(:checked) + label:before { 
+	content: "[ ]\202F"; 
 }
 
-.css-checkbox:checked + label:after { 
-	content: url("/img/1F426-200D-2B1B-outline.svg"); 
-	position: absolute; 
-	justify-content: center; 
-	align-items: center; 
-	left: calc(0.2 * var(--base-font-size)); 
-	top: 0; 
-	font-size: var(--base-font-size); 
-	height: var(--base-font-size); 
-	width: var(--base-font-size); 
-	font-style: normal;
-	text-decoration: none !important;
-}
-
-.dark-toggle .css-checkbox:checked + label:after { 
-	content: url("/img/1F426-200D-2B1B-outline-white.svg");
-}
-
-@media (prefers-color-scheme: dark) {
-	.css-checkbox:checked + label:after { 
-	content: url("/img/1F426-200D-2B1B-outline-white.svg"); }
-	.dark-toggle .css-checkbox:checked + label:after { 
-	content: url("/img/1F426-200D-2B1B-outline.svg");
-}
+.css-checkbox:checked + label:before { 
+	content: "[x]\202F"; 
 }
 
 {%- endcss %}
@@ -88,7 +65,7 @@ function toggle(source) {
 </ul>
 
 {% if toggleallnotes === "yes" %}
-<p style="font-family:var(--monospace);"><input name="cssCheckbox" id="allnoteexpand" type="checkbox" onclick="toggle(this)" class="css-checkbox">
+<p style="font-family:var(--secondary-font);"><input name="cssCheckbox" id="allnoteexpand" type="checkbox" onclick="toggle(this)" class="css-checkbox">
 	<label for="allnoteexpand"><span>check this box to expand all inline notes (*requires javascript)</span></label></p>
 {% endif %}
 

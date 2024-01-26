@@ -104,6 +104,16 @@
     font-display: swap;
 }
 
+/*** love this font but didn't find a use for it
+@font-face {
+    font-family: 'Fairfax Hax HD';
+    src: url('/font/FairfaxHaxHD.woff2') format('woff2'),
+        url('/font/FairfaxHaxHD.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+***/
+
 /* defaults */
 
 :root { 
@@ -111,6 +121,8 @@
     --monospace: "Ubuntu Mono", "Inconsolata", Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
     --header-font: var(--monospace);
     --body-font: var(--serif);
+    --blockquote-font: var(--serif);
+    --secondary-font: "Ubuntu Mono", "Inconsolata", Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
     --ipa-font: "Gentium Plus", TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
 }
 
@@ -211,6 +223,10 @@ blockquote,
 li,
 td {
     line-height: 1.6;
+}
+
+blockquote {
+    font-family: var(--blockquote-font);
 }
 
 a[href] {
@@ -402,7 +418,7 @@ header {
 .postlist-date,
 .postlist-tags,
 .postlist-item:before {
-    font-family: var(--monospace);
+    font-family: var(--secondary-font);
     color: var(--text-color-secondary-highlight);
 }
 
@@ -441,7 +457,7 @@ header {
 /* tags list */
 
 .post-metadata {
-    font-family: var(--monospace);
+    font-family: var(--secondary-font);
     display: inline-flex;
     flex-wrap: wrap;
     gap: .4em;
@@ -451,11 +467,11 @@ header {
 }
 
 .post-metadata time {
-    font-family: var(--monospace);
+    font-family: var(--secondary-font);
 }
 
 .prevnexttext {
-    font-family: var(--monospace);
+    font-family: var(--secondary-font);
 }
 
 /* direct Links / markdown Headers */
@@ -488,7 +504,7 @@ h2+.header-anchor {
 
 footer {
     padding: 1.6em 0;
-    font-family: var(--monospace);
+    font-family: var(--secondary-font);
     font-size: 0.9em;
 }
 
@@ -501,13 +517,13 @@ small {
 }
 
 .comment-form {
-    font-family: var(--monospace);
+    font-family: var(--secondary-font);
 }
 
 form input,
 form select,
 form textarea {
-  font-family: var(--monospace);
+  font-family: var(--secondary-font);
   color: inherit;
   background-color: inherit;
   font-size: 100%;
@@ -559,7 +575,7 @@ form textarea {
 }
 
 .sidenote:before {
-    font-family: var(--monospace);
+    font-family: var(--secondary-font);
     content: counter(sidenote-counter) " ";
     color: var(--text-color-highlight);
 }
@@ -570,7 +586,7 @@ input.margin-toggle {
 
 label.sidenote-number,
 label.margin-toggle-inline-symbol {
-    font-family: var(--monospace);
+    font-family: var(--secondary-font);
     position: relative;
     font-size: 0.9em;
     color: var(--text-color-highlight);
@@ -639,7 +655,7 @@ label.sidenote-number:hover~.sidenote {
         .margin-toggle:hover + .marginnote:after {
         content: " (*To make this note stay on page, or to make it no longer stay, click the number before moving away the mouse pointer)";
         color: var(--text-color-secondary-highlight);
-        font-family: var(--monospace);
+        font-family: var(--secondary-font);
         font-style: italic;
     }
 }
@@ -712,10 +728,6 @@ label.sidenote-number:hover~.sidenote {
 
 .IPA {
     font-family: var(--ipa-font);
-}
-
-.monospace {
-    font-family: "Source Sans 3";
 }
 
 .sc {
