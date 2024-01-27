@@ -206,6 +206,10 @@ body {
     font-style: normal !important;
 }
 
+em:lang(zh-Hant) {
+    text-emphasis-style: open triangle;
+}
+
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 
 .visually-hidden {
@@ -730,9 +734,10 @@ label.sidenote-number:hover~.sidenote {
     font-family: var(--ipa-font);
 }
 
-.sc {
-    font-variant: small-caps;
-}
+ .sc {
+   font-variant: small-caps;
+   font-variant-numeric: oldstyle-nums;
+ }
 
 .translower {
     text-transform: lowercase;
