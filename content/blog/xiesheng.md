@@ -9,7 +9,7 @@ latex: no
 draft: false
 tags: 
  - old chinese
- - palaeography
+ - philology
 ---
 
 ## opening words
