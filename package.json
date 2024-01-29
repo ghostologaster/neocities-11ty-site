@@ -48,6 +48,5 @@
 		"markdown-it-attrs": "^4.1.6",
 		"markdown-it-bracketed-spans": "^1.0.1",
 		"markdown-it-multimd-table": "^4.2.3",
-		"mathup": "^1.0.0-rc.0"
 	}
 }
