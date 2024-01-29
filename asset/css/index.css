@@ -114,14 +114,53 @@
 }
 ***/
 
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('/font/SourceSans3-Bold.woff2') format('woff2'),
+        url('/font/SourceSans3-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('/font/SourceSans3-BoldIt.woff2') format('woff2'),
+        url('/font/SourceSans3-BoldIt.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('/font/SourceSans3-It.woff2') format('woff2'),
+        url('/font/SourceSans3-It.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('/font/SourceSans3-Regular.woff2') format('woff2'),
+        url('/font/SourceSans3-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 /* defaults */
 
 :root { 
     --serif: "Source Serif 4", TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+    --sans-serif: "Source Sans 3", Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
     --monospace: "Ubuntu Mono", "Inconsolata", Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
     --header-font: var(--monospace);
     --body-font: var(--serif);
-    --blockquote-font: var(--serif);
+    --blockquote-font: var(--sans-serif);
     --secondary-font: "Ubuntu Mono", "Inconsolata", Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
     --ipa-font: "Gentium Plus", TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
 }
@@ -230,7 +269,33 @@ td {
 }
 
 blockquote {
+    margin: 0.4em 1.2em;
     font-family: var(--blockquote-font);
+    font-size: 96%;
+    background-color: var(--secondary-background-color);
+}
+
+blockquote p {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+blockquote p:first-child {
+    padding-top: 0.8em;
+}
+
+blockquote p:last-child {
+    padding-bottom: 0.8em;
+}
+
+blockquote span.bl-h {
+    background-color: var(--background-color);
+    border: 0.1em dashed var(--text-color-highlight);
+    color: var(--text-color-highlight);
+    padding: 0.2em 0.4em;
+    margin-top: 0.4em;
+    margin-right: 0.8em;
+    float: left;
 }
 
 a[href] {
@@ -552,7 +617,7 @@ button:hover {
 form input,
 form textarea {
   background: none;
-  border: 1px dashed var(--text-color);
+  border: 0.1em dashed var(--text-color);
   width: 100%;
   margin: 0.4em 0;
   padding: 0.4em;
