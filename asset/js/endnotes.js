@@ -20,9 +20,9 @@ let id = {
 export default function(css_selector, options) {
     Object.assign(opt, options)
     document.querySelectorAll(css_selector).forEach( node => {
-        node.addEventListener('mouseover', dialog_create)
         node.addEventListener('mouseover', is_mobile() ? dialog_create : debounce(dialog_create))
         node.addEventListener('mouseout', dialog_remove)
+        node.addEventListener('click', e => e.preventDefault())
     })
 }
 
