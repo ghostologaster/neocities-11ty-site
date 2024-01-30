@@ -4,7 +4,7 @@ layout: layouts/base.njk
 {# Only include the syntax highlighter CSS on blog posts #}
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 {%- css %}{% include "asset/css/prism-diff.css" %}{%- endcss %}
-{% if toggle_all_notes === "yes" %}
+{% if checkboxesexist === "yes" %}
 {%- css %}
 
 /* checkbox to toggle all inline notes */
@@ -41,18 +41,6 @@ layout: layouts/base.njk
 {%- endcss %}
 {% endif %}
 
-{% if toggle_all_notes === "yes" %}
-<script>
-/* https://stackoverflow.com/a/35218069 */
-function toggle(source) {
-    var checkboxes = document.querySelectorAll('input[class="margin-toggle"]');
-    for (var i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i] != source)
-            checkboxes[i].checked = source.checked;
-    }
-}
-</script>
-{% endif %}
 <h1>{{ title }}</h1>
 
 <ul class="post-metadata">
@@ -64,9 +52,9 @@ function toggle(source) {
 	{%- endfor %}
 </ul>
 
-{% if toggle_all_notes === "yes" %}
-<p style="font-family:var(--secondary-font);"><input name="cssCheckbox" id="allnoteexpand" type="checkbox" onclick="toggle(this)" class="css-checkbox">
-	<label for="allnoteexpand"><span>check this box to expand all inline notes (*requires javascript)</span></label></p>
+{% if checkboxesexist === "yes" %}
+<p style="font-family:var(--secondary-font);"><input id="notetoggle" type="checkbox" onclick='' class="css-checkbox">
+	<label for="notetoggle"><span>check this box to expand all inline notes (*requires javascript)</span></label></p>
 {% endif %}
 
 <article>
