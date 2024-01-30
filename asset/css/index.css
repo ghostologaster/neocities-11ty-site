@@ -214,7 +214,7 @@
 /* dark mode toggle */
 
 .toggle-dark-button {
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 /* global stylesheet */
@@ -309,8 +309,8 @@ a[href] {
     text-decoration: underline dotted;
 }
 
-.postlist-tags > a[href] {
-    color: var(--text-color-secondary-highlight) !important;
+.postlist-tags a[href] {
+    color: var(--text-color-secondary-highlight);
     text-decoration: underline dotted;
 }
 
@@ -489,7 +489,7 @@ header:after {
 .postlist {
     list-style: none;
     padding: 0;
-    padding-left: 1.6rem;
+    padding-left: 1.6em;
 }
 
 .postlist-item {
@@ -506,7 +506,7 @@ header:after {
     content: ""counter(start-from, decimal-leading-zero) ". ";
     line-height: 100%;
     text-align: right;
-    margin-left: -1.6rem;
+    margin-left: -1.6em;
 }
 
 .postlist-date,
@@ -516,10 +516,14 @@ header:after {
     color: var(--text-color-secondary-highlight);
 }
 
+.postlist-date,
+.postlist-tags {
+    font-size: 90%;
+}
+
 .postlist-link {
-    font-size: 1.2em;
     font-family: var(--header-font);
-    flex-basis: calc(100% - 1.5rem);
+    flex-basis: calc(100% - 1.5em);
     padding-left: .25em;
     padding-right: .5em;
     text-underline-position: from-font;
@@ -528,7 +532,11 @@ header:after {
 }
 
 .postlist-link:visited {
-    color: var(--text-color) !important;
+    color: var(--text-color);
+}
+
+.homepage-list a:visited {
+    color: var(--text-color);
 }
 
 /* tags */
