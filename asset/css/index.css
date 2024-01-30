@@ -172,7 +172,7 @@
     --secondary-background-color: #ededed;
 
     --text-color: #242627;
-    --text-color-highlight: #242627;
+    --text-color-highlight: #FCA106;
     --text-color-secondary-highlight: DimGray;
 
     --syntax-tab-size: 2;
@@ -185,7 +185,7 @@
     --secondary-background-color: #313639;
 
     --text-color: #f5f3ef;
-    --text-color-highlight: #f5f3ef;
+    --text-color-highlight: #F9D27D;
     --text-color-secondary-highlight: Silver;
 }
 
@@ -195,7 +195,7 @@
         --secondary-background-color: #313639;
 
         --text-color: #f5f3ef;
-        --text-color-highlight: #f5f3ef;
+        --text-color-highlight: #F9D27D;
         --text-color-secondary-highlight: Silver;
     }
 
@@ -204,7 +204,7 @@
         --secondary-background-color: #ededed;
 
         --text-color: #242627;
-        --text-color-highlight: #242627;
+        --text-color-highlight: #FCA106;
         --text-color-secondary-highlight: DimGray;
 
         --syntax-tab-size: 2;
@@ -296,8 +296,8 @@ blockquote p:last-child {
 
 blockquote span.bl-h {
     background-color: var(--background-color);
-    border: 0.1em dashed var(--text-color-highlight);
-    color: var(--text-color-highlight);
+    border: 0.1em dashed var(--text-color);
+    color: var(--text-color);
     padding: 0.2em 0.4em;
     margin-top: 0.4em;
     margin-right: 0.8em;
@@ -305,7 +305,7 @@ blockquote span.bl-h {
 }
 
 a[href] {
-    color: var(--text-color-highlight);
+    color: var(--text-color);
     text-decoration: underline dotted;
 }
 
@@ -383,6 +383,8 @@ h4,
 h5,
 h6 {
     font-family: var(--header-font);
+    font-weight: normal;
+
 }
 
 h1, h2 {
@@ -471,8 +473,13 @@ header:after {
     text-decoration: underline;
 }
 
+.nav-item:hover,
+.nav-item:active {
+    color: var(--text-color-highlight);
+}
+
 .nav-item a[href]:visited {
-    color: var(--text-color-highlight) !important;
+    color: var(--text-color);
 }
 
 /* posts list */
@@ -509,7 +516,6 @@ header:after {
 
 .postlist-link {
     font-size: 1.2em;
-    font-weight: bold;
     font-family: var(--header-font);
     flex-basis: calc(100% - 1.5rem);
     padding-left: .25em;
@@ -520,11 +526,7 @@ header:after {
 }
 
 .postlist-link:visited {
-    color: var(--text-color-highlight) !important;
-}
-
-.postlist-item-active .postlist-link {
-    font-weight: bold;
+    color: var(--text-color) !important;
 }
 
 /* tags */
@@ -652,22 +654,24 @@ form textarea {
 
 .footnotes-heading {
     background-color: var(--secondary-background-color);
-    color: var(--text-color-highlight);
+    color: var(--text-color);
     padding: 0.2em 0.4em;
     width: fit-content;
     font-size: 1em;
     font-weight: normal !important;
+    border: 0.1em dashed var(--text-color);
 }
 
 .footnote-ref {
     font-family: var(--secondary-font);
+    color: var(--text-color);
     vertical-align: baseline;
     position: relative;
     top: -0.4em;
 }
 
 .footnote-ref a:visited {
-    color: var(--text-color-highlight);
+    color: var(--text-color);
 }
 
 .footnotes-list {
@@ -700,7 +704,7 @@ form textarea {
   }
 
 .handle-text {
-    color: var(--text-color-highlight);
+    color: var(--text-color);
     text-decoration: underline dotted;
 }
 
