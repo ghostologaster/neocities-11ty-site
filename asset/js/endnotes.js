@@ -21,6 +21,7 @@ export default function(css_selector, options) {
     Object.assign(opt, options)
     document.querySelectorAll(css_selector).forEach( node => {
         node.addEventListener('mouseover', dialog_create)
+        node.addEventListener('mouseover', is_mobile() ? dialog_create : debounce(dialog_create))
         node.addEventListener('mouseout', dialog_remove)
     })
 }
@@ -101,4 +102,16 @@ function dialog_remove2(event) {
         }
     })
     if (removed && opt.after_hook) opt.after_hook(event.target)
+}
+
+function debounce(fn, ms = 250) {
+    let timeout_id
+    return function(...args) {
+        clearTimeout(timeout_id)
+        timeout_id = setTimeout(() => fn.apply(this, args), ms)
+    }
+}
+
+function is_mobile() {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 }
