@@ -4,7 +4,7 @@ eleventyNavigation:
   key: About
   order: 3
 latex: yes
-date: 2024-01-25
+date: 2024-01-30
 title: About
 ---
 
