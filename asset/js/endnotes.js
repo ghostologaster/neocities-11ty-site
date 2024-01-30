@@ -1,4 +1,4 @@
-// https://github.com/gromnitsky/endnotes; MIT
+// modified from https://github.com/gromnitsky/endnotes; MIT
 
 let opt = {
     width: () => window.innerWidth - 300 < 100 ? window.innerWidth - 60 : 300,
@@ -32,11 +32,12 @@ function dialog_create(event) {
     if (!event.target.matches(':hover')) return
 
     let width = opt.width()
-    let padding = 16
+    let padding = 1
     let border = 1
     let width_total = width + padding*2 + border*2
     let height = opt.height
-    let height_total = height + padding*2 + border*2
+    let trasparent_margin = 1
+    let height_total = height + padding*2 + border*2 + trasparent_margin*2
     let x = event.x - width_total/2
     let y = event.y
 
@@ -45,20 +46,36 @@ function dialog_create(event) {
     wrapper.id = id.wrapper
     wrapper.style.position = 'fixed'
     wrapper.style.left = `${x}px`
-    wrapper.style.top =`calc(${y}px + 1em)`
-    
+    wrapper.style.top =`${y}px`
+//    wrapper.style.outline = '1px solid red'
+
+    /* wrapper inner div is not transparent
+
+       +-------------+
+       | transparent |
+       |+-----------+|
+       ||           ||
+       ||   dlg     ||
+       ||           ||
+       |+-----------+|
+       | transparent |
+       +-------------+
+    */
     wrapper.innerHTML = `<div id="${id.content}"></div>`
     let dlg = wrapper.querySelector('#' +id.content)
+    dlg.style.marginTop = trasparent_margin + 'em'
+    dlg.style.marginBottom = trasparent_margin + 'em'
     dlg.style.border = `0.1em solid var(--text-color)`
     dlg.style.background = 'var(--background-color)'
     dlg.style.color = 'var(--text-color)'
-    dlg.style.paddingLeft = padding + 'px'
-    dlg.style.paddingRight = padding + 'px'
+    dlg.style.paddingLeft = padding + 'em'
+    dlg.style.paddingRight = padding + 'em'    
+    dlg.style.overflowY = 'auto'
     dlg.style.width = width + 'px'
     dlg.style.height = height
     dlg.style.fontSize = '90%'
 
-    // fix coordinates if a mouse cursor is too close to the viewport edges
+    // fix coordinates if a mouse cursor is too close to the viewport edges (note: after the changes above this is now non-functional. I'll try to rewrite this when I have time)
     if (x < 0) wrapper.style.left = '0px'
     if (window.innerWidth - x < width_total)
         wrapper.style.left = (window.innerWidth - width_total) + 'px'
