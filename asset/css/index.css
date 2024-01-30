@@ -383,12 +383,15 @@ h4,
 h5,
 h6 {
     font-family: var(--header-font);
-    font-weight: normal;
 
 }
 
 h1, h2 {
     font-size: 1.5em;
+}
+
+.footnotes-heading {
+    font-size: 1.17em;
 }
 
 pre,
@@ -651,16 +654,6 @@ form textarea {
 
 
 /* footnotes */
-
-.footnotes-heading {
-    background-color: var(--secondary-background-color);
-    color: var(--text-color);
-    padding: 0.2em 0.4em;
-    width: fit-content;
-    font-size: 1em;
-    font-weight: normal !important;
-    border: 0.1em dashed var(--text-color);
-}
 
 .footnote-ref {
     font-family: var(--secondary-font);
