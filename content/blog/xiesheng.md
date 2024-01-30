@@ -3,7 +3,7 @@ title: Phonological information in the Chinese writing system
 description: On the phonological information encoded in the Chinese characters and how that is utilized in the reconstruction of Old Chinese initials
 date: 2024-01-19
 post: yes
-comments: yes
+comments: no
 latex: no
 draft: false
 tags: 
