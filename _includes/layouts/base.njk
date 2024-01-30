@@ -28,6 +28,9 @@
 
 		{#- Add the contents of a file to the bundle #}
 		{%- css %}{% include "asset/css/index.css" %}{% endcss %}
+		{% if homepage === "yes" %}
+		<link rel="stylesheet" href="https://neossg.neocities.org/onionring.css">
+		{% endif %}
 		<link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> 
 		
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
