@@ -226,6 +226,7 @@
 html {
     scroll-padding-top: calc(4 * var(--base-font-size));
     scrollbar-gutter: stable;
+    scroll-behavior: smooth;
   }
 
 body {
@@ -339,8 +340,6 @@ ul.artclass {
 }
 
 .links-nextprev {
-    list-style: none;
-    padding: 0;
     margin: 1.6em 0;
 }
 
@@ -451,12 +450,17 @@ header:after {
     padding: 0;
     margin: 0;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .nav-item {
     font-family: var(--monospace);
-    margin-right: 1em;
+    margin-right: calc(0.6em + 0.2vw);
     text-transform: lowercase;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
 }
 
 .nav-item a[href]:not(:hover) {
@@ -643,143 +647,59 @@ form textarea {
     margin: 1em 0; 
 }
 
-/* Tufte-style sidenotes & margin notes (inline version) modified from https://github.com/edwardtufte/tufte-css, MIT license */
 
-.sidenote-number {
-    counter-increment: sidenote-counter;
+/* footnotes */
+
+
+.footnotes-heading {
+    background-color: var(--secondary-background-color);
+    color: var(--text-color-highlight);
+    padding: 0.2em 0.4em;
+    width: fit-content;
+    font-size: 1em;
+    font-weight: normal !important;
 }
 
-.sidenote-number:after,
-.sidenote:before {
-    position: relative;
-    vertical-align: baseline;
-}
-
-.sidenote:before {
+.footnote-ref {
     font-family: var(--secondary-font);
-    content: counter(sidenote-counter) " ";
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;.
+}
+
+.footnote-ref a:visited {
     color: var(--text-color-highlight);
 }
 
-input.margin-toggle {
+.footnotes-list {
+    list-style: none;
+    counter-reset: footnote-list-counter;
+}
+
+.footnotes-list .footnote-item {
+    font-size: 90%;
+    counter-increment: my-awesome-counter;
+  }
+
+.footnotes-list .footnote-item p:before {
+    content: counter(my-awesome-counter) ". ";
+    font-family: var(--secondary-font);
+  }
+
+#footnotes_dialog_content:after {
+    content: "click to jump to this footnote";
+    font-family: var(--secondary-font);
+    display: block;
+    margin-bottom: 0.4em;
+    color: var(--text-color-secondary-highlight);
+    text-align: right;
+    font-size: 90%;
+    font-style: italic;
+}
+
+#footnotes_dialog_content .footnote-backref {
     display: none;
 }
-
-label.sidenote-number,
-label.margin-toggle-inline-symbol {
-    font-family: var(--secondary-font);
-    position: relative;
-    font-size: 0.9em;
-    color: var(--text-color-highlight);
-    top: -0.64em;
-    vertical-align: baseline;
-    display: inline-block;
-    max-height: 1rem;
-    text-decoration: underline;
-    text-underline-offset: 0.25em;
-    /* should be less than or equal to paragraph line-height */
-}
-
-label.sidenote-number:hover~.sidenote {
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-}
-
-    label.margin-toggle:not(.sidenote-number) {
-        display: inline;
-    }
-
-    .margin-toggle-inline-symbol {
-        display: inline;
-    }
-
-    .sidenote-number:after {
-        content: "[" counter(sidenote-counter) "]";
-        speak: none;
-    }
-
-@media (hover: hover) {
-        .margin-toggle:not(:checked, :hover) + .sidenote,
-        .margin-toggle:not(:checked, :hover) + .marginnote {
-            clip: rect(0 0 0 0);
-            clip-path: inset(50%);
-            height: 1px;
-            overflow: hidden;
-            position: absolute;
-            white-space: nowrap;
-            width: 1px;
-        }
-
-        .margin-toggle:checked + .sidenote,
-        .margin-toggle:checked + .marginnote {
-            display: block;
-            float: left;
-            left: 1em;
-            clear: both;
-            width: 95%;
-            margin: 1em 2.5%;
-            position: relative;
-        }
-
-        .margin-toggle:hover + .sidenote,
-        .margin-toggle:hover + .marginnote {
-            display: block;
-            float: left;
-            left: 1em;
-            clear: both;
-            width: 95%;
-            margin: 1em 2.5%;
-            position: relative;
-        }
-
-        .margin-toggle:hover + .sidenote:after, 
-        .margin-toggle:hover + .marginnote:after {
-        content: " (*To make this note stay on page, or to make it no longer stay, click the number before moving away the mouse pointer)";
-        color: var(--text-color-secondary-highlight);
-        font-family: var(--secondary-font);
-        font-style: italic;
-    }
-}
-
-    @media (hover: none) {
-        .margin-toggle:not(:checked) + .sidenote,
-        .margin-toggle:not(:checked) + .marginnote {
-            clip: rect(0 0 0 0);
-            clip-path: inset(50%);
-            height: 1px;
-            overflow: hidden;
-            position: absolute;
-            white-space: nowrap;
-            width: 1px;
-        }
-
-        .margin-toggle:checked + .sidenote,
-        .margin-toggle:checked + .marginnote {
-        display: block;
-        float: left;
-        left: 1em;
-        clear: both;
-        width: 95%;
-        margin: 1em 2.5%;
-        position: relative;
-    } 
-}
-
-    label.margin-toggle {
-        cursor: pointer;
-        color: var(--text-color-highlight);
-        text-decoration: underline dotted !important;
-        text-underline-offset: 0.2em;
-    }
-
-    label.margin-toggle:hover {
-        text-decoration: underline solid !important;
-    }
-
-    label.sidenote-number:hover~.sidenote {
-        text-decoration: inherit;
-    }
-
 
 /* accordion */
 
