@@ -172,7 +172,7 @@
     --secondary-background-color: #ededed;
 
     --text-color: #242627;
-    --text-color-highlight: #FCA106;
+    --text-color-highlight: #242627;
     --text-color-secondary-highlight: DimGray;
 
     --syntax-tab-size: 2;
@@ -185,7 +185,7 @@
     --secondary-background-color: #313639;
 
     --text-color: #f5f3ef;
-    --text-color-highlight: #F9D27D;
+    --text-color-highlight: #f5f3ef;
     --text-color-secondary-highlight: Silver;
 }
 
@@ -195,7 +195,7 @@
         --secondary-background-color: #313639;
 
         --text-color: #f5f3ef;
-        --text-color-highlight: #F9D27D;
+        --text-color-highlight: #f5f3ef;
         --text-color-secondary-highlight: Silver;
     }
 
@@ -204,7 +204,7 @@
         --secondary-background-color: #ededed;
 
         --text-color: #242627;
-        --text-color-highlight: #FCA106;
+        --text-color-highlight: #242627;
         --text-color-secondary-highlight: DimGray;
 
         --syntax-tab-size: 2;
