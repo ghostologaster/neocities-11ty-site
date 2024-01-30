@@ -650,7 +650,6 @@ form textarea {
 
 /* footnotes */
 
-
 .footnotes-heading {
     background-color: var(--secondary-background-color);
     color: var(--text-color-highlight);
@@ -664,7 +663,7 @@ form textarea {
     font-family: var(--secondary-font);
     vertical-align: baseline;
     position: relative;
-    top: -0.4em;.
+    top: -0.4em;
 }
 
 .footnote-ref a:visited {
@@ -685,21 +684,6 @@ form textarea {
     content: counter(my-awesome-counter) ". ";
     font-family: var(--secondary-font);
   }
-
-#footnotes_dialog_content:after {
-    content: "the webmaster is still testing the functionalities of this pop-up.";
-    font-family: var(--secondary-font);
-    display: block;
-    margin-bottom: 0.4em;
-    color: var(--text-color-secondary-highlight);
-    text-align: right;
-    font-size: 90%;
-    font-style: italic;
-}
-
-#footnotes_dialog_content .footnote-backref {
-    display: none;
-}
 
 /* accordion */
 
