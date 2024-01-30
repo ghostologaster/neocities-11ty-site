@@ -5,6 +5,7 @@ const markdownItAttrs = require("markdown-it-attrs");
 const markdownItBracketedSpans = require("markdown-it-bracketed-spans");
 const markdownItMultimdTable = require("markdown-it-multimd-table");
 const wordcountPlugin = require("eleventy-plugin-wordcount-extended");
+const markdownItFootnote = require('markdown-it-footnote');
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -123,6 +124,10 @@ module.exports = function(eleventyConfig) {
 			multibody:  true,
 			autolabel:  true,
 		  });
+		  mdLib.use(markdownItFootnote).renderer.rules.footnote_block_open = () => (
+			'<h2 class="footnotes-heading">footnotes</h2>\n' +
+			'<section class="footnotes">\n' +
+			'<ol class="footnotes-list">\n');
 	});
 
 	// Features to make your build faster (when you need them)
