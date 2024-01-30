@@ -687,7 +687,7 @@ form textarea {
   }
 
 #footnotes_dialog_content:after {
-    content: "click to jump to this footnote";
+    content: "the webmaster is still testing the functionalities of this pop-up.";
     font-family: var(--secondary-font);
     display: block;
     margin-bottom: 0.4em;
