@@ -76,10 +76,10 @@ function toggle(source) {
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
 {%- if nextPost or previousPost %}
-<ul class="links-nextprev">
-	{%- if nextPost %}<li><span class="prevnexttext">Next post:</span> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-	{%- if previousPost %}<li><span class="prevnexttext">Previous post:</span> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-</ul>
+<section class="links-nextprev">
+	{%- if nextPost %}<h2 class="footnotes-heading">next post</h2><ul style="list-style: none;"><li><a class="prevnexttext" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li></ul>{% endif %}
+	{%- if previousPost %}<h2 class="footnotes-heading">previous post</h2> <ul style="list-style: none;"><li><a class="prevnexttext" href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li></ul>{% endif %}
+</section>
 
 {%- endif %}
 {%- endif %}
