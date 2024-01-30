@@ -125,8 +125,8 @@ module.exports = function(eleventyConfig) {
 			autolabel:  true,
 		  });
 		  mdLib.use(markdownItFootnote).renderer.rules.footnote_block_open = () => (
-			'<h2 class="footnotes-heading">footnotes</h2>\n' +
 			'<section class="footnotes">\n' +
+			'<h2 class="footnotes-heading">footnotes</h2>\n' +
 			'<ol class="footnotes-list">\n');
 	});
 
