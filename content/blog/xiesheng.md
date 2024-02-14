@@ -32,7 +32,7 @@ The majority of the Chinese characters are each composed of some sound-bearing (
 
 The phonetic element is phonetically significant but semantically irrelevant, whereas the taxogram is semantically significant but phonetically irrelevant. I think of it this way: the phonetic element points to a pool of near-homophonous morphemes (recall that in Old Chinese almost all morphemes are monosyllabic), and the taxogram is essentially a classificatory label that offers additional semantic information needed to locate the intended morpheme in that pool.
 
-Traditionally, the relationship among the members of one such pool of phonetic-element-sharing near-homophones are called <dfn>xiéshēng</dfn> [諧聲]{lang="zh-Hant"} (XS, literally "sound harmony"), and such pools are referred to as <dfn>XS series</dfn> (the term <dfn>phonetic series</dfn> is also common). We say there is <dfn>XS contact</dfn> between two OC or MC phonological entities (e.g. initials, rimes, etc.) if there exist two morphemes \[X\] and \[Y\], each with one of said entities, that can be written with the same phonetic element.
+Traditionally, the relationship among the members of one such pool of phonetic-element-sharing near-homophones is called <dfn>xiéshēng</dfn> [諧聲]{lang="zh-Hant"} (XS, literally "sound harmony"), and such pools are referred to as <dfn>XS series</dfn> (the term <dfn>phonetic series</dfn> is also common). We say there is <dfn>XS contact</dfn> between two OC or MC phonological entities (e.g. initials, rimes, etc.) if there exist two morphemes \[X\] and \[Y\], each with one of said entities, that can be written with the same phonetic element.
 
 ## XS and MC in tandem
 
@@ -48,7 +48,7 @@ The following table contains all phonologically distinct MC initials:
 |  |  |  | *z*, [z]{.IPA} [邪]{lang="zh-Hant"} | *zr*, [ʐ]{.IPA} [俟]{lang="zh-Hant"} | *zy*, [ʑ]{.IPA} [船]{lang="zh-Hant"} | *h*, [ɣ]{.IPA} [匣]{lang="zh-Hant"} ||
 |  | *l*, [l]{.IPA} [來]{lang="zh-Hant"} |  |  |  | *y*, [j]{.IPA} [以]{lang="zh-Hant"} | *hj*, [w]{.IPA} [云]{lang="zh-Hant"} ||
 
-The Chinese character in each cell is the traditional name for that initial. The traditional names differ slightly from the ones shown in Baxter & Sagart (2014: 15): they have [/dʑ/]{.IPA} [禪]{lang="zh-Hant"} and [/ʐ/]{.IPA} \[unnamed\] while I follow another tradition with [/dʑ/]{.IPA} [常]{lang="zh-Hant"} and [/ʐ/]{.IPA} [俟]{lang="zh-Hant"}. The first in each cell is Baxter's MC transcription, followed by the phonological value proposed by [Huang (1995](https://search.worldcat.org/title/34697412){target="_blank"}: 22&ndash;34, in Mandarin).
+The Chinese character in each cell is the traditional name for that initial. The traditional names differ slightly from the ones shown in [Baxter & Sagart (2014](https://search.worldcat.org/title/841206012){target="_blank"}: 15): they have [/dʑ/]{.IPA} [禪]{lang="zh-Hant"} and [/ʐ/]{.IPA} \[unnamed\] while I follow another tradition with [/dʑ/]{.IPA} [常]{lang="zh-Hant"} and [/ʐ/]{.IPA} [俟]{lang="zh-Hant"}. The first in each cell is Baxter's MC transcription, followed by the phonological value proposed by [Huang (1995](https://search.worldcat.org/title/34697412){target="_blank"}: 22&ndash;34, in Mandarin).
 
 Since there was a large gap of time from OC to MC, at MC times the XS situation had become more opaque, and how one should interpret the MC reflection of XS as an OC phenomenon has invoked much debate, especially when it comes to the initials. I will explain one important example here with my understanding of the present model. Please forgive inevitable oversimplifications. 
 
@@ -78,6 +78,10 @@ The character(s) following each morpheme is the one(s) usually employed for that
 - \[*tsyin*, "true"\], [真]{lang="zh-Hant"}
 
 …and so on. 
+
+> [(sidenote)]{.bl-h} Note that the examples of XS I used in this post are all based on the "received" XS, i.e. XS reflected in the use of characters in the received body of ancient texts transmitted through the centuries. It is of course indefensible to use received XS indiscriminately as evidence, since we know the stabilization of this system has spanned a long period of time; it can be unclear if a particular case of XS mapping could reflect pre-Qín habits, or if it was a late innovation against inertia. When investigating received XS it's necessary to single out late inventions wherever possible, and on top of that it's safer to only speak of significant tendencies, keeping a wary eye on XS behaviours that are statistically scarce and otherwise poorly corroborated. 
+> 
+> It's easy to see how the writing evidence from the dated excavated texts (e.g. that from the early-Zhōu bronze inscriptions or Warring-States writings on bamboo slips) has been crucial in clarifying, correcting and confirming our conclusions that had been previously drawn (or failed to be drawn) from received XS; Baxter and Sagart, as a wellknown example, have stressed this in their 2014 work. I cite only received XS examples in this post simply for convenience; as demonstrations they suffice. (`2024-02-14` addendum)
 
 Though the MC values of these initials can be subdivided into three groups of distinct places of articulation \{ *t*, *th*, *d* \} (dental), \{ *tsy*, *tsyh*, *dzy* \} (alveopalatal) and \{ *tr*, *trh*, *dr* \} (retroflex), such substructure is not reflected in the XS behaviour; while some phonetic elements do appear to be specialized, the three groups come into XS contact with each other with no overall inhibition. The MC dental and retroflex affricates \{ *ts*, *tsh*, *dz*, *tsr*, *tsrh*, *dzr* \} form a similar XS class, with much analogical XS behaviour. As an example, observe the following series with phonetic element [且]{lang="zh-Hant"}:
 
@@ -117,7 +121,7 @@ In the model of Baxter (1992), "\[&plus;*ρ*\]" is "presence of a [\*-r-]{.IPA} 
 | *C* = *T* | [\*t-]{.IPA} > *t-* <br> [\*th-]{.IPA} > *th-* <br> [\*d-]{.IPA} > *d-* | [\*tr-]{.IPA} > *tr-* <br> [\*thr-]{.IPA} > *trh-* <br> [\*dr-]{.IPA} > *dr-* | [\*tj-]{.IPA} > *tsy-* <br> [\*thj-]{.IPA} > *tsyh-* <br> [\*dj-]{.IPA} > *dzy-* | [\*trj-]{.IPA} > *trj-* <br> [\*thrj-]{.IPA} > *trhj-* <br> [\*drj-]{.IPA} > *drj-* | 
 | *C* = *Ts* | [\*ts-]{.IPA} > *ts-* <br> [\*tsh-]{.IPA} > *tsh-* <br> [\*dz-]{.IPA} > *dz-* | [\*tsr-]{.IPA} > *tsr-* <br> [\*tshr-]{.IPA} > *tsrh-* <br> [\*dzr-]{.IPA} > *dzr-* |  [\*tsj-]{.IPA} > *tsj-* <br> [\*tshj-]{.IPA} > *tshj-* <br> [\*dzj-]{.IPA} > *dzj-* | [\*tsrj-]{.IPA} > *tsrj-* <br> [\*tshrj-]{.IPA} > *tsrhj-* <br> [\*dzj-]{.IPA} > *dzrj-* |
 
-It's obvious that the model adopted by [Baxter & Sagart (2014)](https://search.worldcat.org/title/841206012){target="_blank"} is isomorphic…
+It's obvious that the model adopted by Baxter & Sagart (2014) is isomorphic…
 
 | | [\*Cˤ-]{.IPA} | [\*Cˤr-]{.IPA} | [\*C-]{.IPA} | [\*Cr-]{.IPA} |
 | :--- | :--- | :--- | :--- | :---- | :--- |
