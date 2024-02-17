@@ -318,6 +318,10 @@ a[href]:visited {
     color: var(--text-color-secondary-highlight);
 }
 
+a.section-head:visited {
+    color: var(--text-color);
+}
+
 a[href]:hover,
 a[href]:active {
     text-decoration: underline solid;
