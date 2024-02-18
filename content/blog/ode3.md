@@ -1,5 +1,5 @@
 ---
-title: Some philological notes on Shī 3 (卷耳)
+title: Some philological notes on Shī 3 (Juǎn-Ěr)
 description: Talking about Shi 3 from Shijing
 date: 2024-02-17
 post: yes
