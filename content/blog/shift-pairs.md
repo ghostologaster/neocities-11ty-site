@@ -1,7 +1,7 @@
 ---
 title: Shift-pairs
 description: Talking about an orthographically special kind of words in English
-date: 2024-02-19
+date: 2024-02-22
 post: yes
 comments: no
 latex: yes
