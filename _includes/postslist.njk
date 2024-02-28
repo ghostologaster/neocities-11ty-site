@@ -5,7 +5,7 @@
 		<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
 		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
         <span class="postlist-tags">
-		{% for tag in post.data.tags %}{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}{%- if loop.first %}&nbsp;»&nbsp;{% endif %}{% if (tag !== "all") and (tag !== "nav") and (tag !== "post") and (tag !== "posts") %}<a href="{{ tagUrl }}" target="_blank">#{{ tag }}</a>{%- if not loop.last %},&nbsp;{% endif %}{% endif %}{% endfor %}
+		{% for tag in post.data.tags %}{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}{%- if loop.first %}&nbsp;»&nbsp;{% endif %}{% if (tag !== "all") and (tag !== "nav") and (tag !== "post") and (tag !== "posts") %}<a href="{{ tagUrl }}" target="_blank" rel="noreferrer">#{{ tag }}</a>{%- if not loop.last %},&nbsp;{% endif %}{% endif %}{% endfor %}
 		</span>
 	</li>
 {% endfor %}

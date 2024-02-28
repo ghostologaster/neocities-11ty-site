@@ -6,6 +6,7 @@ const markdownItBracketedSpans = require("markdown-it-bracketed-spans");
 const markdownItMultimdTable = require("markdown-it-multimd-table");
 const wordcountPlugin = require("eleventy-plugin-wordcount-extended");
 const markdownItFootnote = require('markdown-it-footnote');
+const markdownItForInline = require('markdown-it-for-inline');
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -105,6 +106,7 @@ module.exports = function(eleventyConfig) {
 
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", mdLib => {
+		
 		mdLib.use(markdownItAnchor, {
 			permalink: markdownItAnchor.permalink.ariaHidden({
 				placement: "after",
@@ -116,7 +118,9 @@ module.exports = function(eleventyConfig) {
 			slugify: eleventyConfig.getFilter("slugify")
 		});
 		mdLib.use(markdownItAttrs);
+
 		mdLib.use(markdownItBracketedSpans);
+
 		mdLib.use(markdownItMultimdTable, {
 			multiline:  true,
 			rowspan:    true,
@@ -124,10 +128,20 @@ module.exports = function(eleventyConfig) {
 			multibody:  true,
 			autolabel:  true,
 		  });
-		  mdLib.use(markdownItFootnote).renderer.rules.footnote_block_open = () => (
+		
+		mdLib.use(markdownItFootnote).renderer.rules.footnote_block_open = () => (
 			'<section class="footnotes">\n' +
 			'<h2 class="footnotes-heading">footnotes</h2>\n' +
 			'<ol class="footnotes-list">\n');
+		
+		// https://v2.franknoirot.co/posts/external-links-markdown-plugin/
+		mdLib.use(markdownItForInline, 'url_new_win', 'link_open', function (tokens, idx) {
+			const [, href] = tokens[idx].attrs.find(attr => attr[0] === 'href')
+    
+			if (href && (!href.startsWith('/') && !href.startsWith('#'))) {
+			  tokens[idx].attrPush([ 'target', '_blank' ])
+			  tokens[idx].attrPush([ 'rel', 'noreferrer' ])
+		  }});
 	});
 
 	// Features to make your build faster (when you need them)

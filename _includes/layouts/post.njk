@@ -76,7 +76,7 @@ layout: layouts/base.njk
 		<form class="comment-form accordion" action="https://riku.miso.town/submit?user_id=35&label={{ page.url | htmlBaseUrl | slugify }}" method="post">
 		<input type="checkbox" name="collapse" id="handle1" />
 		<h2 class="handle"><label for="handle1">// <span class="handle-text">any comments?</span></label></h2>
-		<div class="content"><p><small style="color: var(--text-color-secondary-highlight);">(PLEASE NOTE: no one except me will receive what you sent, but by sending it, you agree that I may post it to this website at a later date. I will not disclose your email unless given your explicit permission. The form is collected by <a href="https://riku.miso.town/" target="_blank" style="font-family: var(--monospace);">riku.miso.town</a>.)</small></p></div>
+		<div class="content"><p><small style="color: var(--text-color-secondary-highlight);">(PLEASE NOTE: no one except me will receive what you sent, but by sending it, you agree that I may post it to this website at a later date. I will not disclose your email unless given your explicit permission. The form is collected by <a href="https://riku.miso.town/" target="_blank" rel="noreferrer" style="font-family: var(--monospace);">riku.miso.town</a>.)</small></p></div>
 		  <div class="content comment-form-field">
 		    <label for="name">name*</label>
 		    <input type="text" name="name" id="name" placeholder="name" required>
