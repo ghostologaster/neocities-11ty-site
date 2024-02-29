@@ -155,6 +155,9 @@ module.exports = function(eleventyConfig) {
 			if (href && (href.includes('commons.wikimedia.org'))) {
 				tokens[idx].attrPush([ 'class', 'wikimedia-commons' ])
 			}
+			if (href && ((href.includes('youtube.com')) || href.includes('youtu.be'))) {
+				tokens[idx].attrPush([ 'class', 'youtube' ])
+			}
 		});
 	});
 

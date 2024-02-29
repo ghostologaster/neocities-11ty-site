@@ -773,12 +773,18 @@ form textarea {
     content: "\00a0[Wikimedia Commons]"
 }
 
+.youtube:after {
+    content: "\00a0[youtube]";
+}
+
 .downloadable:after,
 .internet-archive:after,
 .worldcat:after,
 .doi:after,
-.wikimedia-commons:after {
+.wikimedia-commons:after,
+.youtube:after {
     font-variant: small-caps;
+    font-family: var(--body-font);
     line-height: 0;
     position: relative;
     color: var(--text-color-secondary-highlight);
