@@ -141,12 +141,18 @@ module.exports = function(eleventyConfig) {
 			if (href && (!href.startsWith('/') && !href.startsWith('#'))) {
 			  tokens[idx].attrPush([ 'target', '_blank' ])
 			  tokens[idx].attrPush([ 'rel', 'noreferrer' ])
-		  }
+		    }
 		    if (href && (href.includes('worldcat.org'))) {
 				tokens[idx].attrPush([ 'class', 'worldcat' ])
 			}
 			if (href && (href.includes('archive.org')) && (!href.includes('annas-archive.org')) &&  !(href == "https://archive.org/")) {
 				tokens[idx].attrPush([ 'class', 'internet-archive' ])
+			}
+			if (href && (href.includes('doi.org'))) {
+				tokens[idx].attrPush([ 'class', 'doi' ])
+			}
+			if (href && (href.includes('commons.wikimedia.org'))) {
+				tokens[idx].attrPush([ 'class', 'wikimedia-commons' ])
 			}
 		});
 	});

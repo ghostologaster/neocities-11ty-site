@@ -765,9 +765,19 @@ form textarea {
     content: "\00a0[Worldcat]";
 }
 
+.doi:after {
+    content: "\00a0[doi]";
+}
+
+.wikimedia-commons:after {
+    content: "\00a0[Wikimedia Commons]"
+}
+
 .downloadable:after,
 .internet-archive:after,
-.worldcat::after {
+.worldcat:after,
+.doi:after,
+.wikimedia-commons:after {
     font-variant: small-caps;
     line-height: 0;
     position: relative;
