@@ -141,7 +141,14 @@ module.exports = function(eleventyConfig) {
 			if (href && (!href.startsWith('/') && !href.startsWith('#'))) {
 			  tokens[idx].attrPush([ 'target', '_blank' ])
 			  tokens[idx].attrPush([ 'rel', 'noreferrer' ])
-		  }});
+		  }
+		    if (href && (href.includes('worldcat.org'))) {
+				tokens[idx].attrPush([ 'class', 'worldcat' ])
+			}
+			if (href && (href.includes('archive.org')) && (!href.includes('annas-archive.org')) &&  !(href == "https://archive.org/")) {
+				tokens[idx].attrPush([ 'class', 'internet-archive' ])
+			}
+		});
 	});
 
 	// Features to make your build faster (when you need them)
