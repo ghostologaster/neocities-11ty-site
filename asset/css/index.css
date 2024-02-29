@@ -175,7 +175,7 @@
 
     --syntax-tab-size: 2;
 
-    --base-font-size: calc(0.2vh + 1em);
+    --base-font-size: calc(0.12vh + 1.2em);
 }
 
 .dark-toggle {
@@ -279,14 +279,13 @@ p,
 blockquote,
 li,
 td {
-    line-height: 1.6;
+    line-height: 1.52;
 }
 
 blockquote {
     margin: 0.2em 0.4em;
     font-family: var(--blockquote-font);
     font-size: 96%;
-    background-color: var(--secondary-background-color);
 }
 
 blockquote p {
@@ -480,13 +479,14 @@ header:after {
     padding: 0;
     margin: 0;
     list-style: none;
-    flex-wrap: wrap;
 }
 
 .nav-item {
     font-family: var(--monospace);
     margin-right: calc(0.6em + 0.2vw);
     text-transform: lowercase;
+    display: inline-block;
+    line-height: 1.66;
 }
 
 .nav-item:last-child {
@@ -754,25 +754,27 @@ form textarea {
 }
 
 .downloadable:after {
-    content: " dl";
-    font-variant: small-caps;
-    position: relative;
-    color: var(--text-color-secondary-highlight);
-    font-size: 0.9em;
-    top: -0.1em;
-    vertical-align: baseline;
-    display: inline-block;
-    max-height: 1em;
+    content: "\00a0[downloadable]";
 }
 
 .internet-archive:after {
-    content: " ia";
+    content: "\00a0[Internet Archive]";
+}
+
+.worldcat:after {
+    content: "\00a0[Worldcat]";
+}
+
+.downloadable:after,
+.internet-archive:after,
+.worldcat::after {
     font-variant: small-caps;
+    line-height: 0;
     position: relative;
     color: var(--text-color-secondary-highlight);
-    font-size: 0.9em;
-    top: -0.1em;
+    font-size: 0.6em;
+    top: -0.48em;
     vertical-align: baseline;
     display: inline-block;
-    max-height: 1rem;
+    max-height: 1em;
 }
