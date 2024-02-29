@@ -22,6 +22,7 @@ module.exports = function(eleventyConfig) {
 		html: true,
 		breaks: true,
 		linkify: true,
+		typographer: true
 	  };
 	// Copy the contents of the `asset` folder to the output folder
 	// For example, `./asset/css/` ends up in `_site/css/`
