@@ -12,10 +12,10 @@ tags:
  - philology
 ---
 
-[采采卷耳　不盈頃筐　嗟我懷人　寘彼周行
-陟彼崔嵬　我馬虺隤　我姑酌彼金罍　維以不永懷
-陟彼高岡　我馬玄黃　我姑酌彼兕觥　維以不永傷
-陟彼砠矣　我馬瘏矣　我僕痡矣　云何吁矣]{lang="zh-Hant"}
+[采采卷耳，不盈頃筐。嗟我懷人，寘彼周行。
+陟彼崔嵬，我馬虺隤。我姑酌彼金罍，維以不永懷。
+陟彼高岡，我馬玄黃。我姑酌彼兕觥，維以不永傷。
+陟彼砠矣，我馬瘏矣，我僕痡矣。云何吁矣。]{lang="zh-Hant"}
 
 Translation by Arthur Waley, 1937 (from [the 1996 Grove Press edition](https://search.worldcat.org/title/1028857580), edited by Joseph Roe Allen):
 
@@ -55,16 +55,16 @@ Karlgren, 1950:
 
 ## stanza 1
 
-[采采卷耳　不盈頃筐　嗟我懷人　寘彼周行]{lang="zh-Hant"}
+[采采卷耳，不盈頃筐。嗟我懷人，寘彼周行]{lang="zh-Hant"}
 
 - [Waley]{.sc}: *Thick grows the cocklebur; but even a shallow basket I did not fill. Sighing for the man I love, I laid it there on the road.*
 - [Karlgren]{.sc}: *I gather the* küan-er *plant, but it does not fill my slanting basket; I am sighing for my beloved one; I place it here on the road of Chou.*
 
-[1.1](#1-1){style="font-family:var(--monospace);"}{id="1-1"}{class="section-head"}&emsp;Off the bat the translations differ in the first line, with Waley giving "thick grows \[the plant\]", and Karlgren "I gather \[the plant\]". This is due to different interpretations of the word [采采]{lang="zh-Hant"} [\*tsʰˤəʔ-tsʰˤəʔ]{.IPA}. Karlgren follows the Máo gloss: [采采，事采之也]{lang="zh-Hant"} "[\*tsʰˤəʔ-tsʰˤəʔ]{.IPA} means 'to apply oneself to gathering it'". According to M. the word [采采]{lang="zh-Hant"} [\*tsʰˤəʔ-tsʰˤəʔ]{.IPA} is a reduplicative form of the verb [\*tsʰˤəʔ]{.IPA}, "pick, gather"; also in Shī 8 there is [采采芣苢　薄言采之]{lang="zh-Hant"} (W.: "thick grows the plantain; Here we go plucking it"; K.: "we gather the plantain, we gather it"), with M. gloss [采采，非一辭也]{lang="zh-Hant"} "[\*tsʰˤəʔ-tsʰˤəʔ]{.IPA} is a word that means 'not singly' (?)"—this is generally taken to mean that [\*tsʰˤəʔ-tsʰˤəʔ]{.IPA} is [\*tsʰˤəʔ]{.IPA} more than once; i.e. the redup. serves some iterative function. This has been the traditional explanation since the Hàn dynasty. 
+[1.1](#1-1){style="font-family:var(--monospace);"}{id="1-1"}{class="section-head"}&emsp;Off the bat the translations differ in the first line, with Waley giving "thick grows \[the plant\]", and Karlgren "I gather \[the plant\]". This is due to different interpretations of the word [采采]{lang="zh-Hant"} [\*tsʰˤəʔ-tsʰˤəʔ]{.IPA}. Karlgren follows the Máo gloss: [采采，事采之也]{lang="zh-Hant"} "[\*tsʰˤəʔ-tsʰˤəʔ]{.IPA} means 'to apply oneself to gathering it'". According to M. the word [采采]{lang="zh-Hant"} [\*tsʰˤəʔ-tsʰˤəʔ]{.IPA} is a reduplicative form of the verb [\*tsʰˤəʔ]{.IPA}, "pick, gather"; also in Shī 8 there is [采采芣苢，薄言采之]{lang="zh-Hant"} (W.: "thick grows the plantain; Here we go plucking it"; K.: "we gather the plantain, we gather it"), with M. gloss [采采，非一辭也]{lang="zh-Hant"} "[\*tsʰˤəʔ-tsʰˤəʔ]{.IPA} is a word that means 'not singly' (?)"—this is generally taken to mean that [\*tsʰˤəʔ-tsʰˤəʔ]{.IPA} is [\*tsʰˤəʔ]{.IPA} more than once; i.e. the redup. serves some iterative function. This has been the traditional explanation since the Hàn dynasty. 
 
 This interpretation has nevertheless been met with objection since 18 c. One complication is given by the varied glosses of this word—or at least this orthographic form—in the Máo recension of *Shījīng*. In Shī 129 there is [蒹葭蒼蒼]{lang="zh-Hant"} (W.: "thick grow the rush leaves"; K.: "the reeds and rushes are very green") in the first stanza, [蒹葭萋萋]{lang="zh-Hant"} (W.: "close grow the rush leaves"; K.: "the reeds and rushes are luxuriant") in 2nd st., and [蒹葭采采]{lang="zh-Hant"} (W: "very fresh are the rush leaves"; K.: "the reeds and rushes are full of colour") in 3rd st. with M. glosses [蒼蒼，盛也]{lang="zh-Hant"} "[\*tsʰˤaŋ-tsʰˤaŋ]{.IPA} means "luxuriant\[ly growing\]", [萋萋，猶蒼蒼也]{lang="zh-Hant"} "[\*tsʰˤəj-tsʰˤəj]{.IPA} is like [\*tsʰˤaŋ-tsʰˤaŋ]{.IPA}", and [采采，猶萋萋也]{lang="zh-Hant"} "[\*tsʰˤəʔ-tsʰˤəʔ]{.IPA} is like [\*tsʰˤəj-tsʰˤəj]{.IPA}". Here, then, [采采]{lang="zh-Hant"} [\*tsʰˤəʔ-tsʰˤəʔ]{.IPA} is not related to [\*tsʰˤəʔ]{.IPA} "pick, gather" at all, but on its own a reduplicative binom ^[I use the term "binom" to mean "disyllabic morpheme".] with the meaning "luxuriant".
 
-In Shī 150 yet one more instance of this word is found: [蜉蝣之翼　采采衣服]{lang="zh-Hant"} (W.: "wing-sheaths of the mayfly—clothes so bright and gay"; K.: "the wings of the ephemera—how colourful are the clothes!"), which M. glosses as "numerous, many" ([采采，眾多也]{lang="zh-Hant"}), though we have a third-hand record that the Hán [韓]{lang="zh-Hant"} school of the Shī glossed this as [盛也]{lang="zh-Hant"} "luxuriant\[ly coloured\]" (see Dīng 1940)—that is, the same as Máo's gloss in Shī 129. 
+In Shī 150 yet one more instance of this word is found: [蜉蝣之翼，采采衣服]{lang="zh-Hant"} (W.: "wing-sheaths of the mayfly—clothes so bright and gay"; K.: "the wings of the ephemera—how colourful are the clothes!"), which M. glosses as "numerous, many" ([采采，眾多也]{lang="zh-Hant"}), though we have a third-hand record that the Hán [韓]{lang="zh-Hant"} school of the Shī glossed this as [盛也]{lang="zh-Hant"} "luxuriant\[ly coloured\]" (see Dīng 1940)—that is, the same as Máo's gloss in Shī 129. 
 
 Suspicion has been repeatedly raised since 18 c. that the [采采]{lang="zh-Hant"} in Shī 3 and 8 are the same as that in 129 and 150, i.e. a binom meaning "luxuriant" (in 150 at least conceivably > "numerous", but not necessarily). What makes the above more than suspicion, and what I think is the *coup de grâce* to the Máo-traditional reading, is the observation that the construction intended by Máo has no grammatical parallel in *Shījīng*: in *Shījīng* elsewhere, whenever such a reduplicative binom immediately precedes a nominal item, the former is always a modifier of the latter. An elucidation of this exegetic minutia is made in Dīng Shēngshù [丁聲樹]{lang="zh-Hant"} (1940, in Literary Chinese), *Shī Juǎn-Ěr, Fǒuyǐ "cǎicǎi" shuō* <span style="text-decoration:wavy underline;">詩</span>&thinsp;<span style="text-decoration:wavy underline;">卷耳</span>、<span style="text-decoration:wavy underline;">芣苢</span>「采采」說 (this essay can be found in the collection of Dīng's [Complete Works](https://search.worldcat.org/title/1159569259)). On this point W.'s translation is perhaps more precise in meaning; K. has the point of sticking to the traditional reading.
 
@@ -72,8 +72,8 @@ Suspicion has been repeatedly raised since 18 c. that the [采采]{lang="zh-Hant
 
 ## stanzas 2, 3
 
-[陟彼崔嵬　我馬虺隤　我姑酌彼金罍　維以不永懷
-陟彼高岡　我馬玄黃　我姑酌彼兕觥　維以不永傷]{lang="zh-Hant"}
+[陟彼崔嵬，我馬虺隤。我姑酌彼金罍，維以不永懷。
+陟彼高岡，我馬玄黃。我姑酌彼兕觥，維以不永傷]{lang="zh-Hant"}
 
 - [Waley]{.sc}: *I am climbing that rocky hill, my horses stagger, and I stop for a little to drink from that bronze ewer, to still my heart’s yearning. / I am climbing that high ridge, my horses are sick and spent, and I stop for a little while to drink from that horn cup, to still my heart’s pain.*
 - [Karlgren]{.sc}: *I ascend that craggy height, my horses are all exhausted; meanwhile I pour out a cup from that bronze* lei-*vase, in order not to yearn all the time. / I ascend that high ridge, my horses become black and yellow; meanwhile I pour out a cup from that* kuang-*vase of rhinoceros (horn), in order not to be pained all the time.*
@@ -125,7 +125,7 @@ Alternative explanations have been offered. <a href="https://commons.wikimedia.o
 
 ## stanza 4
 
-[陟彼砠矣　我馬瘏矣　我僕痡矣　云何吁矣]{lang="zh-Hant"}
+[陟彼砠矣，我馬瘏矣，我僕痡矣。云何吁矣]{lang="zh-Hant"}
 
 - [Waley]{.sc}: *I am climbing that shale; my horses founder, my groom is stricken. Oh, woe, oh, misery!*
 - [Karlgren]{.sc}: *I ascend that earth-covered cliff; my horses are sick; my driver is ill; oh, how grieved I am!*
