@@ -1,5 +1,5 @@
 ---
-title: FLEECE in "always"?
+title: FLEECE in “always”?
 description: about the pronunciation variant of "always" with the FLEECE vowel in the second syllable
 date: 2024-01-02
 post: yes
