@@ -786,7 +786,6 @@ form textarea {
 .wikimedia-commons:after,
 .youtube:after {
     font-variant: small-caps;
-    font-family: var(--sans-serif);
     line-height: 0;
     position: relative;
     color: var(--text-color-secondary-highlight);
