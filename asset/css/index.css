@@ -342,10 +342,6 @@ a[href] {
     text-decoration: underline dotted;
 }
 
-article a[href] {
-    font-family: var(--sans-serif);
-}
-
 .postlist-tags a[href] {
     color: var(--text-color-secondary-highlight);
     text-decoration: underline dotted;
