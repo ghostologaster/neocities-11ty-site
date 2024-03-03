@@ -151,7 +151,7 @@
     --serif: "Source Serif 4", TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
     --sans-serif: "Ysabeau", Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
     --monospace: "Ubuntu Mono", "Inconsolata", Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
-    --header-font: var(--sans-serif);
+    --heading-font: var(--sans-serif);
     --body-font: var(--serif);
     --blockquote-font: var(--sans-serif);
     --secondary-font: "Ubuntu Mono", "Inconsolata", Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
@@ -418,7 +418,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--header-font);
+    font-family: var(--heading-font);
 }
 
 h1, h2 {
@@ -548,7 +548,7 @@ header:after {
 }
 
 a[href].postlist-link {
-    font-family: var(--header-font);
+    font-family: var(--heading-font);
     font-size: 1.12em;
     flex-basis: calc(100% - 1.5em);
     padding-left: .25em;
@@ -595,7 +595,7 @@ a[href].postlist-link {
 }
 
 .prevnexttext {
-    font-family: var(--header-font);
+    font-family: var(--heading-font);
 }
 
 /* direct Links / markdown Headers */
