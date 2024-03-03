@@ -37,34 +37,38 @@
 }
 
 @font-face {
-    font-family: "Source Serif 4";
-    src: url("/font/SourceSerif4-Regular.ttf.woff2") format('woff2'),
-         url("/font/SourceSerif4-Regular.ttf.woff") format('woff');
+    font-family: 'Source Serif 4';
+    src: url('/font/SourceSerif4-Regular.ttf.woff2') format('woff2'),
+        url('/font/SourceSerif4-Regular.ttf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Source Serif 4";
-    font-style: italic;
-    src: url("/font/SourceSerif4-It.ttf.woff2") format('woff2'),
-         url("/font/SourceSerif4-It.ttf.woff") format('woff');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Source Serif 4";
+    font-family: 'Source Serif 4';
+    src: url('/font/SourceSerif4-Bold.ttf.woff2') format('woff2'),
+        url('/font/SourceSerif4-Bold.ttf.woff') format('woff');
     font-weight: bold;
-    src: url("/font/SourceSerif4-Bold.ttf.woff2") format('woff2'),
-         url("/font/SourceSerif4-Bold.ttf.woff") format('woff');
+    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Source Serif 4";
+    font-family: 'Source Serif 4';
+    src: url('/font/SourceSerif4-It.ttf.woff2') format('woff2'),
+        url('/font/SourceSerif4-It.ttf.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Serif 4';
+    src: url('/font/SourceSerif4-BoldIt.ttf.woff2') format('woff2'),
+        url('/font/SourceSerif4-BoldIt.ttf.woff') format('woff');
     font-weight: bold;
     font-style: italic;
-    src: url("/font/SourceSerif4-BoldIt.ttf.woff2") format('woff2')
-         url("/font/SourceSerif4-BoldIt.ttf.woff") format('woff');
     font-display: swap;
 }
 
@@ -104,49 +108,40 @@
     font-display: swap;
 }
 
-/*** love this font but didn't find a use for it
-@font-face {
-    font-family: 'Fairfax Hax HD';
-    src: url('/font/FairfaxHaxHD.woff2') format('woff2'),
-        url('/font/FairfaxHaxHD.woff') format('woff');
-    font-style: normal;
-    font-display: swap;
-}
-***/
 
 @font-face {
-    font-family: 'Source Sans 3';
-    src: url('/font/SourceSans3-Bold.woff2') format('woff2'),
-        url('/font/SourceSans3-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Source Sans 3';
-    src: url('/font/SourceSans3-BoldIt.woff2') format('woff2'),
-        url('/font/SourceSans3-BoldIt.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Source Sans 3';
-    src: url('/font/SourceSans3-It.woff2') format('woff2'),
-        url('/font/SourceSans3-It.woff') format('woff');
+    font-family: 'Ysabeau';
+    src: url('/font/Ysabeau-MediumItalic.woff2') format('woff2'),
+        url('/font/Ysabeau-MediumItalic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Source Sans 3';
-    src: url('/font/SourceSans3-Regular.woff2') format('woff2'),
-        url('/font/SourceSans3-Regular.woff') format('woff');
+    font-family: 'Ysabeau';
+    src: url('/font/Ysabeau-ExtraBold.woff2') format('woff2'),
+        url('/font/Ysabeau-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ysabeau';
+    src: url('/font/Ysabeau-Medium.woff2') format('woff2'),
+        url('/font/Ysabeau-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ysabeau';
+    src: url('/font/Ysabeau-ExtraBoldItalic.woff2') format('woff2'),
+        url('/font/Ysabeau-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -154,9 +149,9 @@
 
 :root { 
     --serif: "Source Serif 4", TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
-    --sans-serif: "Source Sans 3", Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    --sans-serif: "Ysabeau", Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
     --monospace: "Ubuntu Mono", "Inconsolata", Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
-    --header-font: var(--monospace);
+    --header-font: var(--sans-serif);
     --body-font: var(--serif);
     --blockquote-font: var(--sans-serif);
     --secondary-font: "Ubuntu Mono", "Inconsolata", Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
@@ -305,6 +300,7 @@ blockquote span.bl-h {
     background-color: var(--background-color);
     border: 0.1em dashed var(--text-color);
     color: var(--text-color);
+    font-style: italic;
     padding: 0.2em 0.4em;
     margin-top: 0.4em;
     margin-right: 0.8em;
@@ -314,7 +310,6 @@ blockquote span.bl-h {
 blockquote.epigraph {
     margin: 0;
     padding: 0;
-    font-family: var(--body-font);
     text-align: right;
     font-style: italic;
     background-color: var(--background-color);
@@ -340,6 +335,10 @@ blockquote.epigraph footer {
 a[href] {
     color: var(--text-color);
     text-decoration: underline dotted;
+}
+
+article a[href] {
+    font-family: var(--sans-serif);
 }
 
 .postlist-tags a[href] {
@@ -537,6 +536,7 @@ header:after {
 
 .postlist-date,
 .postlist-tags,
+.postlist-tags a[href],
 .postlist-item:before {
     font-family: var(--secondary-font);
     color: var(--text-color-secondary-highlight);
@@ -547,8 +547,9 @@ header:after {
     font-size: 90%;
 }
 
-.postlist-link {
+a[href].postlist-link {
     font-family: var(--header-font);
+    font-size: 1.12em;
     flex-basis: calc(100% - 1.5em);
     padding-left: .25em;
     padding-right: .5em;
@@ -594,7 +595,7 @@ header:after {
 }
 
 .prevnexttext {
-    font-family: var(--secondary-font);
+    font-family: var(--header-font);
 }
 
 /* direct Links / markdown Headers */
@@ -784,12 +785,13 @@ form textarea {
 .wikimedia-commons:after,
 .youtube:after {
     font-variant: small-caps;
-    font-family: var(--body-font);
+    font-family: var(--sans-serif);
     line-height: 0;
     position: relative;
     color: var(--text-color-secondary-highlight);
-    font-size: 0.6em;
+    font-size: 0.7em;
     top: -0.48em;
+    padding-left: 0.2em;
     vertical-align: baseline;
     display: inline-block;
     max-height: 1em;
