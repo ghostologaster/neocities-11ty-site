@@ -47,11 +47,11 @@ Karlgren, 1950:
 > 
 > I ascend that craggy height <sup>(b)</sup>, my horses are all exhausted; meanwhile I pour out a cup from that bronze *lei*-vase, in order not to yearn all the time.
 > 
-> I ascend that high ridge, my horses become black and yellow <sup>(c)</sup>; meanwhile I pour out a cup from that *kuang*-vase of rhinoceros (horn), in order not to be pained all the time.
+> I ascend that high ridge, my horses become black and yellow <sup>\(c\)</sup>; meanwhile I pour out a cup from that *kuang*-vase of rhinoceros (horn), in order not to be pained all the time.
 > 
 > I ascend that earth-covered cliff; my horses are sick; my driver is ill <sup>(d)</sup>; oh, how grieved I am!
 > 
-> <small>(a) I am working listlessly, with poor result. (b) To look for him. (c) Black-streaked with sweat and yellow with dust; the par. with st. 2 shows that *hüan-huang* ‘black and yellow’ does not mean the horse’s natural colour, but is a result of their labour. (d) The speaker is so restless that both team and coachman are driven to excessive exertions.</small>
+> <small>(a) I am working listlessly, with poor result. (b) To look for him. \(c\) Black-streaked with sweat and yellow with dust; the par. with st. 2 shows that *hüan-huang* ‘black and yellow’ does not mean the horse’s natural colour, but is a result of their labour. (d) The speaker is so restless that both team and coachman are driven to excessive exertions.</small>
 
 ## stanza 1
 
