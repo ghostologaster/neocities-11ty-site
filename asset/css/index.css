@@ -217,7 +217,7 @@
 }
 
 html {
-    scroll-padding-top: calc(3.2 * var(--base-font-size));
+    scroll-padding-top: calc(3.6 * var(--base-font-size));
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
   }
