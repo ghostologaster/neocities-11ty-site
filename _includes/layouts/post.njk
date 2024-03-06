@@ -1,0 +1,70 @@
+---
+layout: layouts/base.njk
+---
+{# Only include the syntax highlighter CSS on blog posts #}
+{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+{%- css %}{% include "asset/css/prism-diff.css" %}{%- endcss %}
+{% if checkboxesexist === "yes" %}
+{%- css %}
+
+/* checkbox to toggle all inline notes */
+.css-checkbox { 
+	position: absolute; 
+	overflow: hidden; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	width: 1px; 
+	margin: -1px; 
+	padding: 0; 
+	border: 0; 
+}
+
+.css-checkbox + label { 
+	position: relative; 
+	cursor: pointer;
+}
+
+.css-checkbox + label > span { 
+	font-size: 90% /* same as <small> */;
+	font-style: italic;
+	color: var(--text-color-secondary-highlight);
+}
+
+.css-checkbox:not(:checked) + label:before { 
+	content: "[ ]\202F"; 
+}
+
+.css-checkbox:checked + label:before { 
+	content: "[x]\202F"; 
+}
+
+{%- endcss %}
+{% endif %}
+
+<h1>{{ title }}</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>&nbsp;</li>
+	<li>~{{ content | wordcount }} words&nbsp;</li>
+	{%- for tag in tags | filterTagList %}
+	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+	<li><a href="{{ tagUrl }}" class="post-tag">#{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+	{%- endfor %}
+</ul>
+
+{% if checkboxesexist === "yes" %}
+<p style="font-family:var(--secondary-font);"><input id="notetoggle" type="checkbox" onclick='' class="css-checkbox">
+	<label for="notetoggle"><span>check this box to expand all inline notes (*requires javascript)</span></label></p>
+{% endif %}
+
+<article>
+{{ content | safe }}
+</article>	
+{%- if collections.posts %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+{%- set nextPost = collections.posts | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<section class="links-nextprev">
+	{%- if nextPost %}<h2 class="footnotes-heading">next post</h2><ul style="list-style: none;"><li><a class="prevnexttext" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li></ul>{% endif %}
+	{%- if previousPost %}<h2 class="footnotes-heading">previous post</h2> <ul style="list-style: none;"><li><a class="prevnexttext" href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li></ul>{% endif %}
+</section>
